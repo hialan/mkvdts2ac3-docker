@@ -17,17 +17,23 @@ Suppose you have a /path/to/film.mkv file with DTS format audio track.
 $ docker pull hialan/mkvdts2ac3
 ```
 
-### change path to the directory which contain film.mkv and build a working tmp dir
+### change path to the directory which contain film.mkv 
 
 ```bash
 $ cd "/path/to"
-$ mkdir tmp
+```
+
+### build a working tmp dir
+
+```bash
+$ mkdir /path/to/tmp
 ```
 
 ### run the script
 
 ```bash 
-$ docker run -it --rm=true -v "`pwd`":/data hialan/mkvdts2ac3 -w /data/tmp -n /data/film.mkv
+$ docker run -it --rm=true -v "`pwd`":/data hialan/mkvdts2ac3 \
+	-w /data/tmp -n /data/film.mkv
 ```
 
 The image export the mount point /data, so we mount current path to /data, and all the path should use relative path to /data. 
