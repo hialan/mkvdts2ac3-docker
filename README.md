@@ -23,7 +23,7 @@ $ docker pull hialan/mkvdts2ac3
 $ cd "/path/to"
 ```
 
-### build a working tmp dir
+### create a working tmp dir
 
 ```bash
 $ mkdir /path/to/tmp
