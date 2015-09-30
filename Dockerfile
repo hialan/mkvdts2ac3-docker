@@ -5,7 +5,7 @@ MAINTAINER hialan.com@gmail.com
 # X264_VERSION=snapshot-20150829-2245-stable 
 
 # http://ubuntuhandbook.org/index.php/2014/07/upgrade-mkvtoolnix-ubuntu-1404/
-RUN apt-get update && apt-get install -y software-properties-common \
+RUN apt-get update && apt-get install -y software-properties-common rsync\
  && add-apt-repository "deb http://www.bunkus.org/ubuntu/trusty/ ./" \ 
  && wget -O - http://www.bunkus.org/gpg-pub-moritzbunkus.txt | apt-key add - \
  && apt-get update && apt-get install -y mkvtoolnix 
